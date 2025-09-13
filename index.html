@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.1.0/fonts/remixicon.css" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Meow+Script&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="styles.css" />
+  <title>Save date Thành Long & Thu Trang</title>
+</head>
+
+<body>
+  <audio controls autoplay loop hidden id="myAudio">
+    <source src="audio.ogg" type="audio/ogg">
+    <source src="audio/Wedding.mp3" type="audio/mpeg">
+  </audio>
+  <script>
+    const audio = document.getElementById('myAudio');
+    // Khi chuyển tab
+    document.addEventListener('visibilitychange', () => {
+      if (document.hidden) {
+        audio.pause();
+      } else {
+        audio.play().catch(err => {
+          console.log("Không thể tự phát lại do chính sách trình duyệt.");
+        });
+      }
+    });
+  </script>
+  <header class="header" id="home">
+    <nav>
+      <div class="nav__header">
+        <div class="nav__logo">
+          <a href="#">
+            <img src="assets/logo-dark.png" alt="logo" />
+          </a>
+        </div>
+        <div class="nav__menu__btn" id="menu-btn">
+          <i class="ri-menu-line"></i>
+        </div>
+      </div>
+      <ul class="nav__links" id="nav-links">
+        <li><a href="#home">HOME</a></li>
+        <li><a href="#client">Giới thiệu</a></li>
+        <li><a href="#blog">BLOG</a></li>
+        <li class="nav__logo">
+          <a href="#">
+            <img src="assets/logo-dark.png" alt="logo" />
+          </a>
+        </li>
+        <li><a href="#about">ABOUT US</a></li>
+        <li><a href="#timeline">Time line</a></li>
+        <li><a href="#contact">Mừng</a></li>
+      </ul>
+    </nav>
+    <div class="name__header">
+      <h2 class="name__ii">Thành Long & Thu Trang</h2>
+    </div>
+    <div class="section__container service__container">
+      <div class="service__grid">
+        <div class="service__card">
+          <h4>Nhà Trai</h4>
+          <p>
+            Định Hoá, Kim Sơn, Ninh Bình
+          </p>
+          <p>
+            Ngày 29 tháng 7 năm 2025
+          </p>
+        </div>
+        <div class="service__card">
+          <h4>Nhà Gái</h4>
+          <p>
+            Định Hoá, Kim Sơn, Ninh Bình
+          </p>
+          <p>
+            Ngày 29 tháng 7 năm 2025
+          </p>
+        </div>
+      </div>
+    </div>
+    <!-- <section class="service" id="service">
+      
+    </section> -->
+  </header>
+
+  <section class="section__container client__container" id="client">
+    <h2 class="section__header">~ Giới thiệu ~</h2>
+    <!-- Slider main container -->
+    <div class="swiper">
+      <!-- Additional required wrapper -->
+      <div class="swiper-wrapper">
+        <!-- Slides -->
+        <div class="swiper-slide">
+          <div class="client__card">
+            <img src="assets/client-1.jpg" alt="client" />
+            <p>
+              Chú rể Vũ Thành Long hiện đang công tác trong quân đội. Với bản lĩnh kiên cường, tinh thần kỷ luật và
+              trách nhiệm cao, anh không chỉ là người lính hết mình với Tổ quốc mà còn là người đàn ông giàu tình cảm,
+              luôn quan tâm và yêu thương gia đình.
+            </p>
+            <h4>Chú rể Thành Long</h4>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="client__card">
+            <img src="assets/client-2.jpg" alt="client" />
+            <p>
+              Cô dâu Thu Trang hiện đang là bác sĩ, mang trong mình tấm lòng nhân hậu và sự tận tụy với nghề. Không chỉ
+              hết lòng chăm sóc, chữa trị cho bệnh nhân, cô còn luôn là người dịu dàng, giàu yêu thương, mang đến sự ấm
+              áp cho gia đình và những người thân yêu.
+            </p>
+            <h4>Cô dâu Thu Trang</h4>
+          </div>
+        </div>
+      </div>
+      <!-- If we need pagination -->
+      <div class="swiper-pagination"></div>
+    </div>
+  </section>
+
+  <section class="blog" id="blog">
+    <div class="section__container blog__container">
+      <div class="blog__content">
+        <h2 class="section__header">~ LATEST BLOG ~</h2>
+        <p>
+          Ngày đầu gặp nhau, Long – chàng trai khoác trên mình màu áo lính, rắn rỏi và kiên cường, đã vô tình chạm ánh
+          mắt với Trang – cô bác sĩ dịu dàng trong chiếc áo blouse trắng. Anh ấn tượng bởi nụ cười ấm áp, còn cô lại cảm
+          nhận được sự chân thành và mạnh mẽ trong ánh nhìn của anh.</p>
+        <p>
+          Từ những tin nhắn quan tâm giản dị, đến những lần hẹn hò ngắn ngủi xen giữa bộn bề công việc, tình cảm của họ
+          lớn dần lên. Anh – người lính, luôn mang trong mình trách nhiệm bảo vệ Tổ quốc. Cô – người bác sĩ, ngày đêm
+          chăm lo cho sức khỏe bệnh nhân. Hai công việc khác biệt, nhưng cùng chung một điểm: sống vì người khác, và vì
+          nhau.
+        </p>
+        <p>
+          Trải qua bao thử thách, những khoảng cách, những ngày nhớ thương, họ vẫn luôn hướng về nhau. Và hôm nay, Long
+          và Trang đã chọn đi tiếp hành trình đời mình bằng một lời hẹn ước trọn đời, viết tiếp câu chuyện yêu thương
+          ngọt ngào mà họ đã cùng nhau vun đắp.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <div class="section__container about__container" id="about">
+    <h2 class="section__header">WE CAPTURE THE MOMENTS</h2>
+    <p class="section__description">
+      At Capturer, we specialize in freezing those fleeting moments in time
+      that hold immense significance for you. With our passion for photography
+      and keen eye for detail, we transform ordinary moments into
+      extraordinary memories.
+    </p>
+    <p class="section__description">
+      Whether it's a milestone event, a candid portrait, or the breathtaking
+      beauty of nature, we strive to encapsulate the essence of every moment,
+      ensuring that your cherished memories last a lifetime. Trust us to
+      capture the magic of your life's journey, one frame at a time.
+    </p>
+    <img src="assets/logo-dark.png" alt="logo" />
+  </div>
+
+
+  <section class="timeline" id="timeline">
+    <div class="section__container timeline__container">
+      <div class="timeline__content">
+        <h2 class="section__header">~ TIME LINE ~</h2>
+        <div class="timeline">
+          <div class="timeline__event  animated fadeInUp delay-3s timeline__event--type1">
+            <div class="timeline__event__icon ">
+              <i class="lni-cake"></i>
+
+            </div>
+            <div class="timeline__event__date">
+              08h00 20-08-2019
+            </div>
+            <div class="timeline__event__content ">
+              <div class="timeline__event__title">
+                Cầu hôn
+              </div>
+              <div class="timeline__event__description">
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vel, nam! Nam eveniet ut aliquam ab
+                  asperiores, accusamus iure veniam corporis incidunt reprehenderit accusantium id aut architecto harum
+                  quidem dolorem in!</p>
+              </div>
+            </div>
+          </div>
+          <div class="timeline__event animated fadeInUp delay-2s timeline__event--type2">
+            <div class="timeline__event__icon">
+              <i class="lni-burger"></i>
+            </div>
+            <div class="timeline__event__date">
+              20-08-2019
+            </div>
+            <div class="timeline__event__content">
+              <div class="timeline__event__title">
+               Ăn hỏi
+              </div>
+              <div class="timeline__event__description">
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vel, nam! Nam eveniet ut aliquam ab
+                  asperiores, accusamus iure veniam corporis incidunt reprehenderit accusantium id aut architecto harum
+                  quidem dolorem in!</p>
+              </div>
+            </div>
+          </div>
+          <div class="timeline__event animated fadeInUp delay-1s timeline__event--type3">
+            <div class="timeline__event__icon">
+              <i class="lni-slim"></i>
+
+            </div>
+            <div class="timeline__event__date">
+              20-08-2019
+            </div>
+            <div class="timeline__event__content">
+              <div class="timeline__event__title">
+                ĐÁm cưới
+              </div>
+              <div class="timeline__event__description">
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vel, nam! Nam eveniet ut aliquam ab
+                  asperiores, accusamus iure veniam corporis incidunt reprehenderit accusantium id aut architecto harum
+                  quidem dolorem in!</p>
+              </div>
+
+            </div>
+          </div>
+          <div class="timeline__event animated fadeInUp timeline__event--type1">
+            <div class="timeline__event__icon">
+              <i class="lni-cake"></i>
+
+            </div>
+            <div class="timeline__event__date">
+              20-08-2019
+            </div>
+            <div class="timeline__event__content">
+              <div class="timeline__event__title">
+                Tiệc mặn
+              </div>
+              <div class="timeline__event__description">
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vel, nam! Nam eveniet ut aliquam ab
+                  asperiores, accusamus iure veniam corporis incidunt reprehenderit accusantium id aut architecto harum
+                  quidem dolorem in!</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="section__container portfolio__container">
+    <h2 class="section__header">~ PORTFOLIO ~</h2>
+    <div class="portfolio__grid">
+      <div class="portfolio__card">
+        <img src="assets/portfolio-1.jpg" alt="portfolio" />
+        <div class="portfolio__content">
+          <button class="btn">VIEW PPORTFOLIO</button>
+        </div>
+      </div>
+      <div class="portfolio__card">
+        <img src="assets/portfolio-2.jpg" alt="portfolio" />
+        <div class="portfolio__content">
+          <button class="btn">VIEW PPORTFOLIO</button>
+        </div>
+      </div>
+      <div class="portfolio__card">
+        <img src="assets/portfolio-3.jpg" alt="portfolio" />
+        <div class="portfolio__content">
+          <button class="btn">VIEW PPORTFOLIO</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  </div>
+  </div>
+  </section> -->
+
+
+
+  <section class="section__container gallery__container">
+    <h2 class="section__header">~ GALLERY ~</h2>
+    <div class="gallery__grid">
+      <img src="assets/image-1.jpg" alt="gallery" />
+      <img src="assets/image-2.jpg" alt="gallery" />
+      <img src="assets/image-3.jpg" alt="gallery" />
+      <img src="assets/image-4.jpg" alt="gallery" />
+      <img src="assets/image-5.jpg" alt="gallery" />
+      <img src="assets/image-6.jpg" alt="gallery" />
+      <img src="assets/image-7.jpg" alt="gallery" />
+      <img src="assets/image-8.jpg" alt="gallery" />
+    </div>
+    <div class="gallery__btn">
+      <button class="btn">VIEW GALLERY</button>
+    </div>
+  </section>
+
+  <section class="section__container instagram__container">
+    <h2 class="section__header">~ INSTAGRAM ~</h2>
+    <div class="instagram__flex">
+      <img src="assets/image-1.jpg" alt="instagram" />
+      <img src="assets/image-2.jpg" alt="instagram" />
+      <img src="assets/image-3.jpg" alt="instagram" />
+      <img src="assets/image-4.jpg" alt="instagram" />
+      <img src="assets/image-5.jpg" alt="instagram" />
+      <img src="assets/image-6.jpg" alt="instagram" />
+      <img src="assets/image-7.jpg" alt="instagram" />
+      <img src="assets/image-8.jpg" alt="instagram" />
+    </div>
+  </section>
+
+  <footer id="contact">
+    <div class="section__container footer__container">
+      <div class="footer__col">
+        <img src="assets/logo-dark.png" alt="logo" />
+
+      </div>
+      <div class="QR__card">
+        <img src="assets/image-1.jpg" alt="instagram" />
+        <p>VŨ THÀNH LONG</p>
+        <p>BIDV 190001731</p>
+      </div>
+      <div class="QR__card">
+        <img src="assets/image-1.jpg" alt="instagram" />
+        <p>VŨ THÀNH LONG</p>
+        <p>BIDV 190001731</p>
+      </div>
+    </div>
+    <div class="footer__bar">
+      Thành Long & Thu Trang
+    </div>
+  </footer>
+
+  <script src="https://unpkg.com/scrollreveal"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="main.js"></script>
+</body>
+
+</html>
