@@ -37,9 +37,10 @@
   color: var(--white);
   text-align: center;
 }
-@media (max-width : 1170px) {
+@media (width < 1120px) {
   .name__ii {
-  margin-bottom: 1rem;  
+  padding-top: 200px;
+  margin-top: 1rem;  
   font-size: 3rem;
   font-weight: 500;
   font-family: "Meow Script", cursive;
@@ -280,7 +281,7 @@ nav {
   font-weight: 500;
 }
 
-@media (max-width : 1170px) {
+@media (width < 1120px) {
   .service__card h4 {
   position: relative;
   isolation: isolate;
