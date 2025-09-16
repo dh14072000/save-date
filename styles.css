@@ -37,6 +37,16 @@
   color: var(--white);
   text-align: center;
 }
+@media (max-width : 1170px) {
+  .name__ii {
+  margin-bottom: 1rem;  
+  font-size: 3rem;
+  font-weight: 500;
+  font-family: "Meow Script", cursive;
+  color: var(--white);
+  text-align: center;
+}
+}
 
 .section__description {
   color: var(--text-light);
