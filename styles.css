@@ -280,6 +280,36 @@ nav {
   font-weight: 500;
 }
 
+@media (max-width : 1170px) {
+  .service__card h4 {
+  position: relative;
+  isolation: isolate;
+  margin-bottom: 1rem;
+  padding-bottom: 1rem;
+  font-size: 2rem;
+  font-weight: 500;
+  font-family: var(--header-font);
+  color: var(--white);
+}
+
+.service__card h4::after {
+  position: absolute;
+  content: "~";
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 3rem;
+  line-height: 0;
+}
+
+.service__card p {
+  color: var(--white);
+  line-height: 2.25rem;
+  font-size: 1rem;
+  font-weight: 300;
+}
+}
+
 .client__container {
   padding-bottom: 2rem;
 }
