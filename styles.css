@@ -37,7 +37,7 @@
   color: var(--white);
   text-align: center;
 }
-@media (width < 1120px) {
+@media (width < 1300px) {
   .name__ii {
   padding-top: 200px;
   margin-top: 1rem;  
@@ -48,6 +48,7 @@
   text-align: center;
 }
 }
+
 
 .section__description {
   color: var(--text-light);
@@ -281,7 +282,7 @@ nav {
   font-weight: 500;
 }
 
-@media (width < 1120px) {
+@media (width < 1300px) {
   .service__card h4 {
   position: relative;
   isolation: isolate;
@@ -299,14 +300,14 @@ nav {
   bottom: 0;
   left: 50%;
   transform: translateX(-50%);
-  font-size: 3rem;
+  font-size: 2rem;
   line-height: 0;
 }
 
 .service__card p {
   color: var(--white);
   line-height: 2.25rem;
-  font-size: 1rem;
+  font-size: 1.5rem;
   font-weight: 300;
 }
 }
