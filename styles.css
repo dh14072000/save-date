@@ -41,7 +41,7 @@
   .name__ii {
   padding-top: 200px;
   margin-top: 1rem;  
-  font-size: 3rem;
+  font-size: 2.25rem;
   font-weight: 500;
   font-family: "Meow Script", cursive;
   color: var(--white);
@@ -288,8 +288,8 @@ nav {
   isolation: isolate;
   margin-bottom: 1rem;
   padding-bottom: 1rem;
-  font-size: 2rem;
-  font-weight: 500;
+  font-size: 1.75rem;
+  font-weight: 400;
   font-family: var(--header-font);
   color: var(--white);
 }
@@ -300,7 +300,7 @@ nav {
   bottom: 0;
   left: 50%;
   transform: translateX(-50%);
-  font-size: 2rem;
+  font-size: 1.75rem;
   line-height: 0;
 }
 
