@@ -14,21 +14,65 @@
 </head>
 
 <body>
-  <audio controls autoplay loop hidden id="myAudio">
+  <audio controls autoplay loop hidden muted playsinline preload="auto" id="myAudio">
     <source src="audio/Wedding.mp3" type="audio/mpeg">
   </audio>
   <script>
-    const audio = document.getElementById('myAudio');
-    // Khi chuyển tab
-    document.addEventListener('visibilitychange', () => {
+   window.addEventListener("load", () => {
+    const audio = document.getElementById("myAudio");
+
+    function unlockAudio() {
+      console.log("User interaction detected!");
+      audio.muted = false; // bỏ mute
+      audio.play().catch(err => {
+        console.log("Không phát được audio:", err);
+      });
+
+      // Gỡ sự kiện sau khi đã chạy 1 lần
+      document.removeEventListener("click", unlockAudio);
+      document.removeEventListener("mousedown", unlockAudio);
+      document.removeEventListener("touchstart", unlockAudio);
+    }
+
+    // PC: click hoặc mousedown
+    document.addEventListener("click", unlockAudio);
+    document.addEventListener("mousedown", unlockAudio);
+
+    // Mobile: chạm màn hình
+    document.addEventListener("touchstart", unlockAudio);
+
+    document.addEventListener("visibilitychange", () => {
       if (document.hidden) {
         audio.pause();
+        console.log("Tab ẩn → pause nhạc");
       } else {
         audio.play().catch(err => {
-          console.log("Không thể tự phát lại do chính sách trình duyệt.");
+          console.log("Không thể tự phát lại:", err);
         });
+        console.log("Tab hiện → play nhạc");
       }
     });
+  });
+    // const audio = document.getElementById('myAudio');
+    // // Khi chuyển tab
+
+    // document.addEventListener("touchstart", function () {
+    //   console.log("Trang load đến đây1");
+    //   audio.muted = false;   // bỏ mute
+    //   audio.play().catch(err => {
+    //     console.log("Không phát được audio:", err);
+    //   });
+    // }, { once: true });
+    // document.addEventListener('visibilitychange', () => {
+    //   console.log("Trang load đến đây2");
+    //   if (document.hidden) {
+    //     audio.pause();
+    //   } else {
+    //     audio.play().catch(err => {
+    //       console.log("Không thể tự phát lại do chính sách trình duyệt.");
+    //     });
+    //   }
+    // });
   </script>
   <header class="header" id="home">
     <nav>
@@ -81,9 +125,7 @@
         </div>
       </div>
     </div>
-    <!-- <section class="service" id="service">
-      
-    </section> -->
+
   </header>
 
   <section class="section__container client__container" id="client">
@@ -195,7 +237,7 @@
             </div>
             <div class="timeline__event__content">
               <div class="timeline__event__title">
-               Ăn hỏi
+                Ăn hỏi
               </div>
               <div class="timeline__event__description">
                 <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vel, nam! Nam eveniet ut aliquam ab
@@ -336,6 +378,5 @@
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <script src="main.js"></script>
 </body>
-
 
 </html>
